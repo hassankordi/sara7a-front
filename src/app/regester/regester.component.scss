@@ -1,0 +1,25 @@
+.container-fluid{
+    .home-btn{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    background-color: #10BBB3 !important;
+    color: #fff;
+    padding: 80px 0px;
+    font-family: 'Handlee', cursive;
+    .container{
+        
+        .header{
+           
+            font-family: 'Handlee', cursive;
+            font-weight: 800;
+            width: 50%;
+
+        }
+        label{
+            font-weight: 500;
+            font-size: 20px;
+        }
+    }
+}

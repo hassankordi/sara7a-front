@@ -1,0 +1,43 @@
+<section class="container-fluid">
+    <button routerLink='/home' class="btn btn-secondary home-btn"> Home </button>
+    <div class="container p-5">
+        <div class="row justify-content-center">
+            <div class="col-12 d-flex justify-content-center ">
+                <h2 class="header text-center"> LOGIN </h2>
+
+            </div>
+            <div class="col-12">
+                <form (ngSubmit)="login()" [formGroup]="userData" class="form-group">
+                    <!-- email  -->
+                    <div class="p-2">
+                        <label for="email">Email</label>
+                        <input formControlName="email" placeholder="ex:Hassan@gmail.com" id="email" class="form-control"
+                            type="text">
+                            <div *ngIf=' userData.controls.email.touched &&
+                         userData.controls.email.invalid' class="alert alert-danger" role="alert">
+                            <i>in-valid email !!!</i>
+                        </div>
+                    </div>
+                    <!-- pass  -->
+                    <div class="p-2">
+                        <label for="password">Password</label>
+                        <input formControlName="password" placeholder="ex:#@ad65&%#" id="password" class="form-control"
+                            type="password">
+                            <div *ngIf=' userData.controls.password.touched &&
+                         userData.controls.password.invalid' class="alert alert-danger" role="alert">
+                            <i>in-valid Password !!!</i>
+                        </div>
+                    </div>
+        
+
+                    <button  type="submit" class="btn btn-primary mt-3"> Login </button>
+                   
+
+                </form>
+                <i *ngIf='message'>{{message}}</i>
+            </div>
+
+        </div>
+
+    </div>
+</section>

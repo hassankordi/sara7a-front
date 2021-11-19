@@ -1,0 +1,49 @@
+.container-fluid {
+    background-color: #10BBB3 !important;
+    padding: 80px 20px;
+    height: 100vh;
+    font-family: 'Handlee', cursive;
+    .container {
+        background-color: #fff !important;
+        border-radius: 8px;
+        padding: 20px;
+      
+        .row {
+            background-color: #fff !important;
+            border-radius: 8px;
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .message-head {
+                font-size: 30px;
+                font-family: 'Handlee', cursive;
+                font-weight: 700;
+              
+                text-align: center;
+                margin: auto;
+                margin-bottom: 50px;
+            }
+            .message-area {
+                
+                display: flex;
+                // flex-direction: column;
+                justify-content: center;
+                button{
+                    display: block;
+                    margin: auto;
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+
+               
+            }
+        }
+        .link-regester{
+            cursor: pointer;
+            
+        }
+    }
+}

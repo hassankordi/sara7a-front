@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <button (click)='logOut()' class="btn logOut">log out</button>
+  <div class="container">
+
+    <div class="header text-center">
+      Hello , {{userName}}
+
+      <p>You have {{numberOfMessages}} messages so far</p>
+
+    </div>
+    <div class="link-con">
+      <i class="d-block">invite your friends to send messages for you</i>
+      <!-- (click)='copyLink()' -->
+      <button class="btn btn-dark" cdkCopyToClipboard='{{userLink}}' (click)='copyLink()'>Copy Link</button>
+      <i class="d-block mt-2 text-success" *ngIf='alertCopyMessag'>Link Copied Success</i>
+    </div>
+
+    <div class="messages-con mt-4">
+      <table *ngIf='!noMessages' class="table table-hover messages-table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col" colspan="2">messages</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let msg of allMessages ;index as x'>
+            <th scope="row">{{x+1}}</th>
+            <td colspan="2">{{msg.content}}</td>
+            <td (click)='deleteMessage(msg)'><i class="far fa-trash-alt"></i></td>
+            
+          </tr>
+         
+        </tbody>
+      </table>
+      <i>{{message}}</i>
+
+    </div>
+  </div>
+
+</div>

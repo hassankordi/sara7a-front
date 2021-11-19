@@ -1,0 +1,29 @@
+<section class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 message-head">
+                <span>Send a Hidden Message To {{name}}</span>
+            </div>
+
+            <div class="col-12 message-area">
+                <div>
+                    <form [formGroup]='formArea' action="">
+                        <textarea formControlName='content' class="form-control my-4" name="message" id="messageArea"
+                            cols="50" rows="10">
+
+                </textarea>
+                    </form>
+                    <button [disabled]='!formArea.valid' class="btn btn-info" (click)='onSend()'>send</button>
+
+                </div>
+
+            </div>
+            <i *ngIf='!content'>{{message}}</i>
+
+
+        </div>
+        <p class="my-3">you want to use our app ??</p>
+        <i class="link-regester text-primary" routerLink='/regester'>Click Me To Create An Account </i>
+
+    </div>
+</section>

@@ -1,0 +1,91 @@
+<section class="container-fluid">
+    <button routerLink='/home' class="btn btn-secondary home-btn"> Home </button>
+    <div class="container p-5">
+        <div class="row justify-content-center">
+            <div class="col-12 d-flex justify-content-center ">
+                <h2 class="header text-center"> REGESTER </h2>
+
+            </div>
+            <div class="col-12">
+                <form (ngSubmit)="sendData()" [formGroup]="userData" class="form-group">
+                    <!-- name  -->
+                    <div class="p-2">
+                        <label for="name">Name</label>
+                        <input formControlName="name" placeholder="ex:Hassan Hilal" id="name" class="form-control"
+                            type="text">
+                        <div *ngIf=' userData.controls.name.touched &&
+                         userData.controls.name.invalid' class="alert alert-danger" role="alert">
+                            <i>in-valid name !!!</i>
+                        </div>
+                    </div>
+                    <!-- email  -->
+                    <div class="p-2">
+                        <label for="email">Email</label>
+                        <input formControlName="email" placeholder="ex:Hassan@gmail.com" id="email" class="form-control"
+                            type="text">
+                            <div *ngIf=' userData.controls.email.touched &&
+                         userData.controls.email.invalid' class="alert alert-danger" role="alert">
+                            <i>in-valid email !!!</i>
+                        </div>
+                    </div>
+                    <!-- phone  -->
+                    <div class="p-2">
+                        <label for="phone">Phone</label>
+                        <input formControlName="phone" placeholder="ex:01094454829" id="phone" class="form-control"
+                            type="text">
+                            <div *ngIf=' userData.controls.phone.touched &&
+                         userData.controls.phone.invalid' class="alert alert-danger" role="alert">
+                            <i>in-valid phone !!!</i>
+                        </div>
+                    </div>
+                    <!-- pass  -->
+                    <div class="p-2">
+                        <label for="password">Password</label>
+                        <input formControlName="password" placeholder="ex:#@ad65&%#" id="password" class="form-control"
+                            type="password">
+                            <div *ngIf=' userData.controls.password.touched &&
+                         userData.controls.password.invalid' class="alert alert-danger" role="alert">
+                            <i>in-valid Password !!!</i>
+                        </div>
+                    </div>
+                    <!-- confirm pass  -->
+                    <div class="p-2">
+                        <label for="confirmPassword"> Confirm_Password</label>
+                        <input formControlName="confirmPassword" placeholder="ex:#@ad65&%#" id="confirmPassword" class="form-control"
+                            type="password">
+                            <div *ngIf=' userData.controls.confirmPassword.touched &&
+                         userData.controls.confirmPassword.invalid' class="alert alert-danger" role="alert">
+                            <i>in-valid Confirm_Password !!!</i>
+                        </div>
+                    </div>
+                    <!-- age  -->
+                    <div class="p-2">
+                        <label for="age">Age</label>
+                        <input formControlName="age" placeholder="ex:20" id="age" class="form-control"
+                            type="text">
+                            <div *ngIf=' userData.controls.age.touched &&
+                         userData.controls.age.invalid' class="alert alert-danger" role="alert">
+                            <i>in-valid age !!!</i>
+                        </div>
+                    </div>
+                     <!-- adress  -->
+                     <div class="p-2">
+                        <label for="address">Address (Optional)</label>
+                        <input formControlName="address" placeholder="ex:Giza" id="address" class="form-control"
+                            type="text">
+                            <div *ngIf=' userData.controls.address.touched &&
+                         userData.controls.address.invalid' class="alert alert-danger" role="alert">
+                            <i>in-valid address !!!</i>
+                        </div>
+                    </div>
+
+                    <button  type="submit" class="btn btn-primary mt-3"> Regester</button>
+
+                </form>
+                <i *ngIf='message'>{{message}}</i>
+            </div>
+
+        </div>
+
+    </div>
+</section>

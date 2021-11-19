@@ -1,0 +1,83 @@
+.container-fluid{
+    background-color: #10BBB3 !important;
+    .container {
+        .image-con{
+            .img-fluid{
+                border-radius: 8px;
+            }
+        }
+        .info-con{
+            background-color: #fff !important;
+            border-radius: 8px;
+            transform: translateY(20px);
+            transition: all 0.6s 0s;
+            margin: 20px;
+            margin-bottom: 40px;
+            &:hover{
+                transform: translateY(10px);
+                // 0.6 duration and 0s dely
+            }
+            h2{
+                font-family: 'Handlee', cursive;
+            }
+            p{
+                font-family: 'Handlee', cursive;
+                font-size: 20px;
+                font-weight: 800;
+                span {
+                    font-family: 'Handlee', cursive;
+                   font-weight: 100;
+                
+                }
+            }
+            button a{
+                color: #fff;
+                text-decoration: none;
+            
+            }
+        
+        }
+        .app-info-con{
+            background-color: #fff !important;
+            border-radius: 8px;
+            transform: translateY(20px);
+            transition: all 0.6s 0s;
+            margin: 20px;
+            margin-bottom: 40px;
+            &:hover{
+                transform: translateY(10px);
+                // 0.6 duration and 0s dely
+            }
+            h2{
+                font-family: 'Handlee', cursive;
+            }
+            p{
+                font-family: 'Handlee', cursive;
+                font-size: 20px;
+                font-weight: 800;
+                span {
+                    font-family: 'Handlee', cursive;
+                   font-weight: 100;
+                
+                }
+            }
+            button a{
+                color: #fff;
+                text-decoration: none;
+            
+            }
+        
+
+        }
+
+
+    }
+   
+}
+.router-btn{
+    font-family: 'Handlee', cursive;
+    margin: 20px;
+    
+}
+
+
